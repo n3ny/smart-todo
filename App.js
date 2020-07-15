@@ -26,12 +26,17 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import { NavigationContainer } from '@react-navigation/native';
-import {StackNavigatorApp} from './src/screens/routers';
+import { StackNavigatorApp } from './src/screens/routers';
+import { Provider } from 'react-redux';
+import generateStore from './src/redux/store';
 
 export default App = () => {
+  const store = generateStore();
   return (
-    <NavigationContainer>
-      <StackNavigatorApp/>        
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <StackNavigatorApp />
+      </NavigationContainer>
+    </Provider>
   );
 };
