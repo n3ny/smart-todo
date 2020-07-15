@@ -1,16 +1,11 @@
-const templates = [
-    {
-        name: 'Pomodoro',
-        focusTime: 25, //min
-        breackTime: [5,10,15], //min
-        maxTime: 24 //hrs
-    },
+const productive = [
     {
         name: 'Productive',
         focusTime: 60, //min
-        breackTime: [5,10,15], //min
-        maxTime: 24 //hrs
+        breackTime: 20, //min
+        maxFocusTime: 4, //hrs
+        maxBreackTime: 20 //hrs
     },
 ]
 
-export default templates
+export default productive
